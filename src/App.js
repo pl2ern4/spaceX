@@ -2,7 +2,7 @@ import React,{useState,useEffect} from "react";
 import FilterComponent from "./component/FilterComponent";
 import SpaceXComponent from "./component/SpaceXComponent";
 import { objectToQuerystring } from "./utility";
-import './App.css';
+import './App.scss';
 
 function App() {
   const [filter, setFilter] = useState({limit:100});
