@@ -1,3 +1,5 @@
+import React from "react";
+
 const FilterComponent = ({filter, setFilter}) => {
 
     const handleClick = ({key, value}) => {
