@@ -12,14 +12,14 @@ const FilterComponent = ({filter, setFilter}) => {
     const yearListHtml = [];
     for (let i = 2006; i <= 2020; i++) {
         yearListHtml.push(
-            <div className={`button ${ (filter.year === i && `selected`) || ""}`}>
+            <div key={`element-${i}`} className={`button ${ (filter.year === i && `selected`) || ""}`}>
                 <input
                     type="radio"
                     id={`${i}`}
                     name="filterYears"
                     value={`${i}`}
                     onClick={() => handleClick({key: "land_year", value: i})}/>
-                <label for={`${i}`}>{i}</label>
+                <label htmlFor={`${i}`}>{i}</label>
             </div>
         );
     }
@@ -40,7 +40,7 @@ const FilterComponent = ({filter, setFilter}) => {
                     name="launch_success"
                     value="True"
                     onClick={() => handleClick({key: "launch_success", value: true})}/>
-                <label for="launch_success">True</label>
+                <label htmlFor="launch_success">True</label>
             </div>
             <div className={`button ${ (!filter.launch_success && `selected`) || ""}`}>
                 <input
@@ -49,7 +49,7 @@ const FilterComponent = ({filter, setFilter}) => {
                     name="launch_success"
                     value="False"
                     onClick={() => handleClick({key: "launch_success", value: false})}/>
-                <label for="launch_fail">False</label>
+                <label htmlFor="launch_fail">False</label>
             </div>
 
             <span>Successful Landing</span>
@@ -62,7 +62,7 @@ const FilterComponent = ({filter, setFilter}) => {
                     name="land_success"
                     value="true"
                     onClick={() => handleClick({key: "land_success", value: true})}/>
-                <label for="landing-sucess">True</label>
+                <label htmlFor="landing-sucess">True</label>
             </div>
             <div className={`button ${ (!filter.landing_success && `selected`) || ""}`}>
                 <input
@@ -71,7 +71,7 @@ const FilterComponent = ({filter, setFilter}) => {
                     name="land_success"
                     value="false"
                     onClick={() => handleClick({key: "land_success", value: false})}/>
-                <label for="landing-sucess">False</label>
+                <label htmlFor="landing-sucess">False</label>
             </div>
         </div>
     )

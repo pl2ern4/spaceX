@@ -2,7 +2,7 @@ import React from "react";
 
 const SpaceXComponent = ({spaceXDetail=[]}) =>{
     return spaceXDetail.map((obj,key)=>(
-        <div>
+        <div key={`element-${key}`}>
             <img src={`${obj.links.mission_patch}`} alt="rocket" width="" height=""/>
     <h3>{obj.mission_name} #{obj.flight_number}</h3>
             <h4>Mission Ids:</h4>
@@ -14,8 +14,5 @@ const SpaceXComponent = ({spaceXDetail=[]}) =>{
         </div>
     ))
 }
-//[0].links.mission_patch
-
-//[0].links.mission_patch_small
 
 export default SpaceXComponent;
