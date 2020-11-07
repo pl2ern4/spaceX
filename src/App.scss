@@ -1,3 +1,21 @@
+
+@media only screen and (max-width: 600px) {
+
+  .span_2_of_2,
+  .span_1_of_2 {
+    width: 100%;
+    grid-template-columns: auto;
+    grid-gap: unset;
+  }
+
+  .col {
+    margin: 1% 0 1% 0%;
+  }
+  .company-name{
+    font-size: 2em;
+  }
+}
+
 .App {
   padding: 1rem 1rem 0 1rem;
   height: calc(100% - 1rem);
@@ -186,17 +204,3 @@ label [type="radio"] {
 }
 
 /*  GO FULL WIDTH AT LESS THAN 480 PIXELS */
-
-@media only screen and (max-width: 480px) {
-
-  .span_2_of_2,
-  .span_1_of_2 {
-    width: 100%;
-    grid-template-columns: auto;
-    grid-gap: unset;
-  }
-
-  .col {
-    margin: 1% 0 1% 0%;
-  }
-}
