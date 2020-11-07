@@ -26,11 +26,9 @@ function App() {
 
   return (
     <div className="App">
-      <h2>SpaceX Launch Programs</h2>
-      <div>
+      <div className="company-name">SpaceX Launch Programs</div>
+      <div className="grid-container">
       <FilterComponent setFilter={setFilter}  filter={filter}/>
-      </div>
-      <div>
       <SpaceXComponent spaceXDetail={spaceXDetail}/>
       </div>
     </div>
