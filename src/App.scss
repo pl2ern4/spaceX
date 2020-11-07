@@ -80,7 +80,7 @@ label [type="radio"] {
 }
 
 .filter {
-  &--year {
+  &--year, &--option {
     display: grid;
     grid-template-columns: auto auto;
     font-weight: 500;
@@ -138,7 +138,7 @@ label [type="radio"] {
 /*  SECTIONS  */
 .grid-container {
   display: grid;
-  grid-template-columns: 14% auto;
+  grid-template-columns: 14% 2%;
 }
 
 /*  COLUMN SETUP  */
@@ -178,13 +178,9 @@ label [type="radio"] {
 }
 
 .span_1_of_2 {
-  width: 14%;
-  left: 1%;
-  top: 15%;
+  width: 100%;
   background-color: #fff;
   padding: 0.5rem;
-  max-height: 100%;
-  position: fixed;
   border-radius: 0.5rem;
   text-align: center;
 }

@@ -31,39 +31,51 @@ const FilterComponent = ({filter, setFilter}) => {
             <div className="filter--year">
                 {yearListHtml}
             </div>
-            <span>Successful Launch</span>
-            <hr/>
-            <label className={`button ${ (filter.launch_success===true && `selected`) || ""}`}>
-                <input
-                    type="radio"
-                    name="launch_success"
-                    onClick={() => handleClick({key: "launch_success", value: true})}/>
-                <span>True</span>
-            </label>
-            <label className={`button ${ (filter.launch_success===false && `selected`) || ""}`}>
-                <input
-                    type="radio"
-                    name="launch_success"
-                    onClick={() => handleClick({key: "launch_success", value: false})}/>
-                <span>False</span>
-            </label>
+            <div className="filter--launch">
+                <span>Successful Launch</span>
+                <hr/>
+                <div className="filter--option">
+                    <label
+                        className={`button ${ (filter.launch_success === true && `selected`) || ""}`}>
+                        <input
+                            type="radio"
+                            name="launch_success"
+                            onClick={() => handleClick({key: "launch_success", value: true})}/>
+                        <span>True</span>
+                    </label>
+                    <label
+                        className={`button ${ (filter.launch_success === false && `selected`) || ""}`}>
+                        <input
+                            type="radio"
+                            name="launch_success"
+                            onClick={() => handleClick({key: "launch_success", value: false})}/>
+                        <span>False</span>
+                    </label>
+                </div>
+            </div>
 
-            <span>Successful Landing</span>
-            <hr/>
-            <label className={`button ${ (filter.land_success===true && `selected`) || ""}`}>
-                <input
-                    type="radio"
-                    name="land_success"
-                    onClick={() => handleClick({key: "land_success", value: true})}/>
-                <span>True</span>
-            </label>
-            <label className={`button ${ (filter.land_success===false && `selected`) || ""}`}>
-                <input
-                    type="radio"
-                    name="land_success"
-                    onClick={() => handleClick({key: "land_success", value: false})}/>
-                <span>False</span>
-            </label>
+            <div className="filter--landing">
+                <div>Successful Landing</div>
+                <hr/>
+                <div className="filter--option">
+                <label
+                    className={`button ${ (filter.land_success === true && `selected`) || ""}`}>
+                    <input
+                        type="radio"
+                        name="land_success"
+                        onClick={() => handleClick({key: "land_success", value: true})}/>
+                    <span>True</span>
+                </label>
+                <label
+                    className={`button ${ (filter.land_success === false && `selected`) || ""}`}>
+                    <input
+                        type="radio"
+                        name="land_success"
+                        onClick={() => handleClick({key: "land_success", value: false})}/>
+                    <span>False</span>
+                </label>
+                </div>
+            </div>
         </div>
     )
 }
