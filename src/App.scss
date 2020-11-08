@@ -8,15 +8,15 @@
     grid-gap: unset;
   }
 
-  .col {
-    margin: 1% 0 1% 0%;
-  }
   .company-name{
     font-size: 2em;
   }
   .grid-container{
-    
     display: block!important;
+  }
+  .spacex-detail {
+    display: block;
+    margin: 1rem 0;
   }
   .filter {
     padding: 0.5rem 0 0.5rem 0.5rem;
@@ -27,8 +27,12 @@
     }
   }
   .wrapper{
+    margin-top: 1rem;
     display: block!important;
-    
+  }
+  .image-wrapper{
+    top:5%!important;
+    transform: translateX(18%) translateY(5%) !important;
   }
 
 }
