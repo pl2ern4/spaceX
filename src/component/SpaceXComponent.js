@@ -17,7 +17,7 @@ const SpaceXComponent = ({
             </div>
         </div>
     ));
-    return <div className="col span_2_of_2">{spaceXList}</div>
+    return <div className="col span_2_of_2"><div className="wrapper">{spaceXList}</div></div>
 }
 
 export default SpaceXComponent;
