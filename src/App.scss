@@ -75,8 +75,10 @@ label {
   position: relative;
   cursor: pointer;
   background-color: yellowgreen;
-  margin: 1rem;
+  margin: 3% 1%;
   border-radius: 0.5rem;
+  text-align: center;
+  left:3%;
 
   &.selected {
     background-color: lightgreen;
@@ -98,10 +100,14 @@ label [type="radio"] {
 }
 
 .filter {
+  padding: 0.5rem 0 0.5rem 0.5rem;
   &--year, &--option {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+    grid-template-columns: 50% 50%;
     font-weight: 500;
+    padding: 1%;
+    position: relative;
+    right: 2%;
   }
 
   .heading {
@@ -137,12 +143,18 @@ label [type="radio"] {
     background-color: #fff;
 
     .image-wrapper {
-      width: 100%;
+      width: 13em;
+      left: 6.5%;
+      position: relative;
       height: 18rem;
+      margin-bottom: 13%;
       background-color: #80808026;
-      align-items: center;
-      justify-content: center;
-      display: flex;
+      display: block;
+      transform: translateY(7%);
+      img{
+        top:5%;
+        position: relative;
+      }
     }
 
     .detail-wrapper {
@@ -157,15 +169,13 @@ label [type="radio"] {
 /*  SECTIONS  */
 .grid-container {
   display: grid;
-  grid-template-columns: 20% 70%;
+  grid-template-columns: 20% 1fr;
   grid-gap: 1em;
 }
 
 /*  COLUMN SETUP  */
 .col {
   display: block;
-  float: left;
-  margin: 1% 0 1% 1.6%;
 }
 
 .col:first-child {
@@ -204,7 +214,6 @@ label [type="radio"] {
 .span_1_of_2 {
   width: 100%;
   background-color: #fff;
-  padding: 0.5rem;
   border-radius: 0.5rem;
   text-align: center;
 }
