@@ -36,6 +36,22 @@
   }
 
 }
+@media only screen 
+and (min-device-width : 768px) 
+and (max-device-width : 1024px)  { 
+  label {
+    width: 98%!important;
+  }
+  .span_2_of_2 .wrapper {
+    grid-gap: 1rem;
+    grid-template-columns: auto auto!important;
+    max-width: 100%;
+    display: grid;
+  }
+  .image-wrapper {
+    transform: translateY(7%) translateX(17px)!important;
+  }
+}
 
 .App {
   padding: 1rem 1rem 0 1rem;
