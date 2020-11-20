@@ -9,11 +9,31 @@ const SpaceXComponent = ({
                 <img src={`${obj.links.mission_patch}`} alt="rocket" width="200" height="250"/>
             </div>
             <div className="detail-wrapper">
-                <h3>{obj.mission_name}
-                    #{obj.flight_number}</h3>
-                <span><h4>Mission Ids:</h4> {(obj.mission_id && obj.mission_id.join())|| `--`}</span>
-                <span><h4>Sucessful Launch:</h4> {`${obj.launch_success}`}</span>
-                <span><h4>Sucessful Landing :</h4> {obj.launch_landing}</span>
+                <h3>{obj.mission_name} #{obj.flight_number}</h3>
+                <div className="spacex-detail-node">
+                    <span>
+                        <span className="sub-heading">Launch Year:</span> 
+                        {obj.launch_year}
+                    </span>
+                </div>
+                <div className="spacex-detail-node">
+                    <span>
+                        <span className="sub-heading">Mission Ids:</span> 
+                        {(obj.mission_id && obj.mission_id.join())|| `--`}
+                    </span>
+                </div>
+                <div className="spacex-detail-node">
+                    <span>
+                        <span className="sub-heading">Sucessful Launch:</span>
+                        {`${obj.launch_success}`}
+                    </span>
+                </div>
+                <div className="spacex-detail-node">
+                    <span>
+                        <span className="sub-heading">Sucessful Landing :</span>
+                        {obj.launch_landing}
+                    </span>
+                </div>
             </div>
         </div>
     ));

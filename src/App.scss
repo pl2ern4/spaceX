@@ -32,7 +32,11 @@
   }
   .image-wrapper{
     top:5%!important;
-    transform: translateX(18%) translateY(5%) !important;
+    width:unset!important;
+    text-align: center;
+    left:unset!important;
+    margin: 0 5%;
+    // transform: translateX(50%) translateY(50%) !important;
   }
 
 }
@@ -40,16 +44,23 @@
 and (min-device-width : 768px) 
 and (max-device-width : 1024px)  { 
   label {
-    width: 98%!important;
+    width: 84%!important;
   }
   .span_2_of_2 .wrapper {
     grid-gap: 1rem;
-    grid-template-columns: auto auto!important;
+    grid-template-columns: auto auto auto!important;
     max-width: 100%;
     display: grid;
   }
   .image-wrapper {
+    left:unset!important;
     transform: translateY(7%) translateX(17px)!important;
+  }
+}
+
+@media (max-device-width : 1024px) {
+  .copyright-text{
+    flex-direction: column!important;
   }
 }
 
@@ -58,6 +69,16 @@ and (max-device-width : 1024px)  {
   height: calc(100% - 1rem);
   width: auto;
   max-width: 100%;
+  .copyright-text{
+    flex-direction: initial;
+    justify-content: center;
+    margin: 1rem;
+    align-items: center;
+    display: flex;
+    span:nth-child(2){
+      margin-left: 1%;
+    }
+  }
 }
 
 h2,
@@ -147,6 +168,14 @@ label [type="radio"] {
     position: relative;
     right: 2%;
   }
+  &-reset{
+    margin: 1rem 0;
+    @extend .filter--option;
+    display: block;
+    grid-template-columns: unset;
+    right: unset;
+    text-align: center;
+  }
 
   .heading {
     font-size: 2em;
@@ -179,6 +208,10 @@ label [type="radio"] {
     height: auto;
     border-radius: 0.5rem;
     background-color: #fff;
+
+    &-node{
+      margin: 2% 0;
+    }
 
     .image-wrapper {
       width: 13em;
@@ -257,3 +290,11 @@ label [type="radio"] {
 }
 
 /*  GO FULL WIDTH AT LESS THAN 480 PIXELS */
+
+.filter-reset{
+  width:84%;
+  span{
+    margin: 5% 0px;
+    display: inline-flex;
+  }
+}

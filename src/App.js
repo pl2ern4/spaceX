@@ -31,6 +31,10 @@ function App() {
       <FilterComponent setFilter={setFilter}  filter={filter}/>
       <SpaceXComponent spaceXDetail={spaceXDetail}/>
       </div>
+      <div className="copyright-text">
+          <span>Developed by:</span>
+          <span> Prerna Chaturvedi</span>
+      </div>
     </div>
   );
 }

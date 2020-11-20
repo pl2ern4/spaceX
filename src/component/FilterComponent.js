@@ -9,6 +9,8 @@ const FilterComponent = ({ filter, setFilter }) => {
         })
     }
 
+    const resetFilter = () => setFilter({});
+
     const yearListHtml = [];
     for (let i = 2006; i <= 2020; i++) {
         yearListHtml.push(
@@ -77,6 +79,7 @@ const FilterComponent = ({ filter, setFilter }) => {
                         </label>
                     </div>
                 </div>
+                <div className=""><label className="button filter-reset" onClick={resetFilter}><span>Reset</span></label></div>
             </div>
         </div>
     )
