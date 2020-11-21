@@ -298,3 +298,45 @@ label [type="radio"] {
     display: inline-flex;
   }
 }
+
+
+/* Loader */
+
+.loader{
+  text-align: center;
+    margin: 0px auto;
+    top: 20%;
+}
+
+.spinner {
+   width:45px;
+   height:45px;
+   display:inline-block;
+   padding:0px;
+   border-radius:100%;
+   border:5px solid;
+   border-top-color:#27ff00;
+   border-bottom-color:rgba(255,255,255, 0.3);
+   border-left-color:#27ff00;
+   border-right-color:rgba(255,255,255, 0.3);
+   -webkit-animation: spinner 1s ease-in-out infinite;
+   animation: spinner 1s ease-in-out infinite;
+}
+@keyframes spinner {
+   from {transform: rotate(0deg);}
+   to {transform: rotate(360deg);}
+}
+@-webkit-keyframes spinner {
+   from {-webkit-transform: rotate(0deg);}
+   to {-webkit-transform: rotate(360deg);}
+}
+/******/
+
+.no-data-found{
+    font-size: 1rem;
+    font-weight: 600;
+    text-align: center;
+    margin: auto;
+    top: 12%;
+    position: relative;
+}

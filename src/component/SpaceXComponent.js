@@ -3,6 +3,9 @@ import React from "react";
 const SpaceXComponent = ({
     spaceXDetail = []
 }) => {
+    if(typeof spaceXDetail==="string"){
+        return <div className="no-data-found">{spaceXDetail}</div>;
+    }
     const spaceXList = spaceXDetail.map((obj, key) => (
         <div className="spacex-detail" key={`element-${key}`}>
             <div className="image-wrapper">
@@ -37,7 +40,7 @@ const SpaceXComponent = ({
             </div>
         </div>
     ));
-    return <div className="col span_2_of_2"><div className="wrapper">{spaceXList}</div></div>
+    return <div className="wrapper">{spaceXList}</div>;
 }
 
 export default SpaceXComponent;
