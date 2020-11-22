@@ -26,7 +26,7 @@ const ModuleNotFoundPlugin = require('react-dev-utils/ModuleNotFoundPlugin');
 const ForkTsCheckerWebpackPlugin = require('react-dev-utils/ForkTsCheckerWebpackPlugin');
 const typescriptFormatter = require('react-dev-utils/typescriptFormatter');
 const ReactRefreshWebpackPlugin = require('@pmmmwh/react-refresh-webpack-plugin');
-
+const { DuplicatesPlugin } = require("inspectpack/plugin");
 const postcssNormalize = require('postcss-normalize');
 
 const appPackageJson = require(paths.appPackageJson);
@@ -227,6 +227,7 @@ module.exports = function (webpackEnv) {
       globalObject: 'this',
     },
     optimization: {
+      runtimeChunk: 'single',
       minimize: isEnvProduction,
       minimizer: [
         // This is only used in production mode
@@ -572,6 +573,12 @@ module.exports = function (webpackEnv) {
             : undefined
         )
       ),
+      new DuplicatesPlugin({
+        // Emit compilation warning or error? (Default: `false`)
+        emitErrors: false,
+        // Display full duplicates information? (Default: `false`)
+        verbose: false
+      }),
       // Inlines the webpack runtime script. This script is too small to warrant
       // a network request.
       // https://github.com/facebook/create-react-app/issues/5358

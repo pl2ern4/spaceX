@@ -1,8 +1,8 @@
 import React, { useState, useEffect, Suspense, lazy } from "react";
-import FilterComponent from "./component/FilterComponent";
+// import FilterComponent from "./component/FilterComponent";
 import { objectToQuerystring } from "./utility";
 import './App.scss';
-
+const FilterComponent = lazy(() => import('./component/FilterComponent'));
 const SpaceXComponent = lazy(() => import('./component/SpaceXComponent'));
 
 function App() {
@@ -12,12 +12,12 @@ function App() {
 
   const getData = params => {
     setSpaceXDetail([])
-    fetch(`${params}`)
+    fetch(`${params}`, { "Cache-Control": "max-age=31536000" })
       .then(res => res.json())
       .then(res => {
-        if(res.length){
+        if (res.length) {
           setSpaceXDetail(res)
-        }else{
+        } else {
           setSpaceXDetail("No Data found for particular search...")
         }
       })
@@ -36,11 +36,14 @@ function App() {
     <div className="App">
       <div className="company-name">SpaceX Launch Programs</div>
       <div className="grid-container">
-        <FilterComponent setFilter={setFilter} filter={filter} />
+
+        <Suspense fallback={<div />}>
+          <FilterComponent setFilter={setFilter} filter={filter} />
+        </Suspense>
         <div className={`col span_2_of_2 ${(!spaceXDetail.length && `loader`) || ''}`}>
-          {(!spaceXDetail.length && <div className="spinner" />) || 
-            <Suspense fallback={<div/>}>
-               <SpaceXComponent spaceXDetail={spaceXDetail} />
+          {(!spaceXDetail.length && <div className="spinner" />) ||
+            <Suspense fallback={<div />}>
+              <SpaceXComponent spaceXDetail={spaceXDetail} />
             </Suspense>
           }
         </div>
