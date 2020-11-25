@@ -48,13 +48,13 @@ and (max-device-width : 1024px)  {
   }
   .span_2_of_2 .wrapper {
     grid-gap: 1rem;
-    grid-template-columns: auto auto auto!important;
+    grid-template-columns: auto auto!important;
     max-width: 100%;
     display: grid;
   }
   .image-wrapper {
     left:unset!important;
-    transform: translateY(7%) translateX(17px)!important;
+    margin: 0 auto!important;
   }
 }
 
@@ -148,8 +148,9 @@ label [type="radio"] {
 }
 
 [type="radio"]+span {
-  display: inline-block;
-  padding: 1em;
+  position: relative;
+  top: 27%;
+  vertical-align: middle;
 }
 
 .filter,
