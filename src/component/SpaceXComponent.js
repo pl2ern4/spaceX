@@ -35,7 +35,7 @@ const SpaceXComponent = ({
     const spaceXList = spaceXDetailState.map((obj, key) => (
         <div className="spacex-detail" key={`element-${key}`}>
             <div className="image-wrapper">
-                <img src={`${obj.links.mission_patch}`} alt="rocket" width="200" height="250" />
+                <img src={`${(obj.links && obj.links.mission_patch || "")}`} alt="rocket" width="200" height="250" />
             </div>
             <div className="detail-wrapper">
                 <h3>{obj.mission_name} #{obj.flight_number}</h3>
