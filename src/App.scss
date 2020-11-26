@@ -17,6 +17,10 @@
   .spacex-detail {
     display: block;
     margin: 1rem 0;
+    padding:1% 0;
+    .detail-wrapper{
+      margin-top: 5%;
+    }
   }
   .filter {
     padding: 0.5rem 0 0.5rem 0.5rem;
@@ -55,6 +59,9 @@ and (max-device-width : 1024px)  {
   .image-wrapper {
     left:unset!important;
     margin: 0 auto!important;
+  }
+  .detail-wrapper{
+    margin-top: 15%!important;
   }
 }
 
@@ -230,7 +237,7 @@ label [type="radio"] {
     }
 
     .detail-wrapper {
-      margin: 2.5rem 1rem;
+      margin: 5% 10%;
       h3{
         color:blue;
       }
